@@ -1,5 +1,5 @@
 // Replace with your Google Sheets published URL (CSV format)
-const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1v.../pub?output=csv';
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQO83OsrtawRdq3qXgo0xzdCbc0o0ask3hqkDrrZCvL4tw2F-2StZaujVsNOr-4adB1lfmCm9IWom6e/pub?output=csv';
 
 async function fetchMenu() {
   try {
