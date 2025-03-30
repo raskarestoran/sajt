@@ -30,7 +30,7 @@ function displayMenu(menu) {
     const menuItem = document.createElement('div');
     menuItem.className = 'menu-item';
     menuItem.innerHTML = `
-      <h3>${item.Name} - ${item.Price}</h3>
+      <h3>${item.Name} : ${item.Price}</h3>
       <p>${item.Description}</p>
     `;
     menuContainer.appendChild(menuItem);
