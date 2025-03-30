@@ -1,20 +1,8 @@
-/* --- START: Added for Sticky Footer --- */
-html {
-  height: 100%; /* Ensure HTML element takes full available height */
-}
-/* --- END: Added for Sticky Footer --- */
-
 body {
   font-family: Arial, sans-serif;
-  margin: 0; /* Keep this */
-  /* padding: 0; This is usually not needed on body if children handle padding */
-  line-height: 1.6; /* Keep this */
-
-  /* --- START: Added for Sticky Footer --- */
-  display: flex;          /* Enable Flexbox for direct children (header, main, footer) */
-  flex-direction: column; /* Stack children vertically */
-  min-height: 100vh;      /* Make body at least the full viewport height */
-  /* --- END: Added for Sticky Footer --- */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
 header {
@@ -22,9 +10,6 @@ header {
   color: #fff;
   padding: 10px 0;
   text-align: center;
-  /* --- START: Added for Sticky Footer --- */
-  flex-shrink: 0; /* Prevent header from shrinking */
-  /* --- END: Added for Sticky Footer --- */
 }
 
 header nav ul {
@@ -43,10 +28,7 @@ header nav ul li a {
 }
 
 main {
-  padding: 20px; /* Keep your existing padding */
-  /* --- START: Added for Sticky Footer --- */
-  flex-grow: 1; /* Allow main to grow and fill space */
-  /* --- END: Added for Sticky Footer --- */
+  padding: 20px;
 }
 
 .menu-item {
@@ -67,24 +49,10 @@ main {
 
 footer {
   text-align: center;
-  padding: 15px 20px; /* Adjusted padding slightly for better spacing */
+  padding: 10px 0;
   background: #333;
   color: #fff;
-  margin-top: auto; /* Crucial fallback/helper with flex */
-  /* --- START: Added for Sticky Footer --- */
-  flex-shrink: 0; /* Prevent footer from shrinking */
-  /* --- END: Added for Sticky Footer --- */
 }
-
-/* Ensure link in footer is visible */
-footer a {
-    color: #add8e6; /* Light blue, stands out against dark background */
-    text-decoration: underline;
-}
-footer a:hover {
-    color: #ffffff;
-}
-
 
 /* --- Style for the Get Directions Button --- */
 
@@ -119,18 +87,3 @@ footer a:hover {
 }
 
 /* --- End of button styles --- */
-
-
-/* == You might still have your CAROUSEL styles below here if you moved them == */
-/* Ensure they are included if you moved them from the index.html <style> block */
-
-/* Example: */
-/* --- Carousel Styles --- */
-/* .carousel-container { ... } */
-/* .carousel-slide { ... } */
-/* .carousel-item { ... } */
-/* .carousel-item img { ... } */
-/* .carousel-button { ... } */
-/* .carousel-button.prev { ... } */
-/* .carousel-button.next { ... } */
-/* --- End Carousel Styles --- */
