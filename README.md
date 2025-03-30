@@ -1,1 +1,1 @@
-primer sajta restorana
+sajt restoran
