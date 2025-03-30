@@ -54,6 +54,39 @@ footer {
   color: #fff;
 }
 
+/* --- Loading Spinner Styles --- */
+.loader-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack spinner and text vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 40px 20px; /* Add some space around */
+  min-height: 150px; /* Give it some minimum height */
+  text-align: center;
+}
+
+.loading-spinner {
+  border: 6px solid #f3f3f3; /* Light grey base circle */
+  border-top: 6px solid #555; /* Darker grey for spinning part */
+  border-radius: 50%; /* Make it a circle */
+  width: 40px; /* Size of the spinner */
+  height: 40px;
+  animation: spin 1.5s linear infinite; /* Apply the spin animation */
+  margin-bottom: 15px; /* Space between spinner and text */
+}
+
+.loader-container p {
+    color: #666; /* Style the loading text */
+    font-style: italic;
+}
+
+/* Define the spinning animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* --- End Loading Spinner Styles --- */
+
 /* --- Style for the Get Directions Button --- */
 
 .directions-button {
