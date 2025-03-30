@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <!-- Add a specific meta description for the About page -->
+  <meta name="description" content="Learn more about [Restaurant Name], our location, and how to contact us. Find us easily with our map.">
+  <title>About Us - [Restaurant Name]</title> <!-- Update title -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,36 +20,57 @@
   </header>
 
   <main>
-    <section class="about">
-      <h1>About Our Restaurant</h1>
-      <p>
-        Welcome to <strong>[Restaurant Name]</strong>, where culinary excellence meets heartfelt hospitality. Located in the heart of [City/Area], our restaurant has been a beloved destination for food lovers since [Year Established].
-      </p>
+    <h1>Contact & Location</h1>
+    <div class="contact-location-container">
+      <div class="contact-details">
+        <h2>Address</h2>
+        <p>
+          <!-- ** REPLACE WITH ACTUAL ADDRESS ** -->
+          Your Street Name 123<br>
+          City, Postal Code<br>
+          Country
+        </p>
 
-      <h2>Our Philosophy</h2>
-      <p>
-        At [Restaurant Name], we believe that great food starts with fresh, high-quality ingredients. Our chefs craft each dish with passion, blending traditional recipes with modern techniques to bring you a dining experience that delights the senses.
-      </p>
+        <h2>Telephone Number</h2>
+        <p>
+          <!-- ** REPLACE WITH ACTUAL PHONE NUMBER ** -->
+          <a href="tel:+1234567890">+123 456 7890</a> <!-- Make it clickable -->
+        </p>
 
-      <h2>Our Story</h2>
-      <p>
-        Founded by [Founder’s Name], [Restaurant Name] was born out of a dream to create a welcoming space where people can gather, celebrate, and enjoy exceptional food. From humble beginnings, we’ve grown into a vibrant hub for both locals and visitors, all thanks to our amazing team and loyal customers.
-      </p>
+        <!-- You could add Opening Hours here too -->
+        <!--
+        <h2>Opening Hours</h2>
+        <p>
+          Mon-Fri: 11:00 - 22:00<br>
+          Sat-Sun: 12:00 - 23:00
+        </p>
+        -->
+      </div>
 
-      <h2>Meet the Team</h2>
-      <p>
-        Behind every great meal is a dedicated team. From our talented chefs to our friendly servers, everyone at [Restaurant Name] is committed to making your visit memorable.
-      </p>
-
-      <h2>Join Us</h2>
-      <p>
-        Whether you’re celebrating a special occasion, enjoying a casual meal with family, or exploring new flavors, we can’t wait to welcome you to [Restaurant Name]. Visit us today and see why we’re one of [City/Area]’s favorite dining spots.
-      </p>
-    </section>
+      <div class="location-map">
+        <h2>Our Location</h2>
+        <!-- OpenStreetMap Embed using iframe -->
+        <iframe
+          width="100%"
+          height="350"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=20.6137349,43.2839999,20.6235291,43.2871944&layer=mapnik&marker=43.285597145571316,20.618632011458985"
+          style="border: 1px solid black">
+        </iframe>
+        <br/>
+        <small>
+          <a href="https://www.openstreetmap.org/?mlat=43.28560&mlon=20.61863#map=17/43.28560/20.61863" target="_blank">View Larger Map</a>
+        </small>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2024 [Restaurant Name]. All rights reserved.</p>
+    <!-- Make sure footer content is consistent or updated -->
+    <p>© 2024 [Restaurant Name]. All rights reserved. | Street Name 123, City | +123 456 7890</p>
   </footer>
 </body>
 </html>
