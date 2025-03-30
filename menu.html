@@ -1,166 +1,198 @@
 <!DOCTYPE html>
 <html lang="sr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Istražite ukusnu ponudu RašKafe. Od kafe do poslastica, pronađite svoj omiljeni užitak po kategorijama.">
-  <title>Meni - RašKafe</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* --- Menu Pager Styles --- */
-    #menu-pager {
-      position: relative;
-      padding-bottom: 60px;
-      min-height: 300px;
-    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Istražite ukusnu ponudu RašKafe. Od kafe do poslastica, pronađite svoj omiljeni užitak po kategorijama."
+        />
+        <title>Meni - RašKafe</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            /* --- Menu Pager Styles --- */
+            #menu-pager {
+                position: relative;
+                padding-bottom: 60px;
+                min-height: 300px;
+            }
 
-    .category-page {
-      display: none;
-      animation: fadeIn 0.5s ease-in-out;
-    }
+            .category-page {
+                display: none;
+                animation: fadeIn 0.5s ease-in-out;
+            }
 
-    .category-page.active {
-      display: block;
-    }
+            .category-page.active {
+                display: block;
+            }
 
-    #category-title {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 1.8em;
-      color: #444;
-    }
+            #category-title {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 1.8em;
+                color: #444;
+            }
 
-    .menu-navigation {
-      text-align: center;
-      margin-top: 25px;
-      padding-top: 15px;
-      border-top: 1px solid #eee;
-    }
+            .menu-navigation {
+                text-align: center;
+                margin-top: 25px;
+                padding-top: 15px;
+                border-top: 1px solid #eee;
+            }
 
-    .menu-nav-button {
-      background-color: #555;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
-    }
+            .menu-nav-button {
+                background-color: #555;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                margin: 0 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1em;
+                transition: background-color 0.3s ease;
+            }
 
-    .menu-nav-button:hover:not(:disabled) {
-      background-color: #333;
-    }
+            .menu-nav-button:hover:not(:disabled) {
+                background-color: #333;
+            }
 
-    .menu-nav-button:disabled {
-      background-color: #ccc;
-      cursor: not-allowed;
-      opacity: 0.7;
-    }
+            .menu-nav-button:disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+                opacity: 0.7;
+            }
 
-    /* --- Category Navigation Link Styles --- */
-    #category-nav-links {
-        text-align: center;
-        margin-bottom: 25px; /* Space below the links */
-        padding: 10px 0;
-        border-bottom: 1px solid #eee; /* Separator line */
-        flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-        display: flex; /* Use flexbox for better alignment/wrapping */
-        justify-content: center; /* Center links horizontally */
-        gap: 10px; /* Add spacing between links */
-    }
+            /* --- Category Navigation Link Styles --- */
+            #category-nav-links {
+                text-align: center;
+                margin-bottom: 25px; /* Space below the links */
+                padding: 10px 0;
+                border-bottom: 1px solid #eee; /* Separator line */
+                flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+                display: flex; /* Use flexbox for better alignment/wrapping */
+                justify-content: center; /* Center links horizontally */
+                gap: 10px; /* Add spacing between links */
+            }
 
-    .category-link {
-        display: inline-block; /* Treat links like blocks */
-        padding: 8px 15px;
-        margin: 3px 5px; /* Small margin around links */
-        color: #555;
-        background-color: #f0f0f0; /* Light background */
-        border: 1px solid #ddd;
-        border-radius: 15px; /* Rounded pill shape */
-        text-decoration: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        font-size: 0.9em;
-    }
+            .category-link {
+                display: inline-block; /* Treat links like blocks */
+                padding: 8px 15px;
+                margin: 3px 5px; /* Small margin around links */
+                color: #555;
+                background-color: #f0f0f0; /* Light background */
+                border: 1px solid #ddd;
+                border-radius: 15px; /* Rounded pill shape */
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                font-size: 0.9em;
+            }
 
-    .category-link:hover {
-        background-color: #e0e0e0;
-        color: #333;
-    }
+            .category-link:hover {
+                background-color: #e0e0e0;
+                color: #333;
+            }
 
-    .category-link.active {
-        background-color: #555; /* Darker background for active */
-        color: white; /* White text for active */
-        font-weight: bold;
-        border-color: #555;
-    }
-    /* --- End Category Navigation Link Styles --- */
+            .category-link.active {
+                background-color: #555; /* Darker background for active */
+                color: white; /* White text for active */
+                font-weight: bold;
+                border-color: #555;
+            }
+            /* --- End Category Navigation Link Styles --- */
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Početna</a></li>
-        <li><a href="about.html">O Nama / Lokacija</a></li>
-        <li><a href="menu.html">Meni</a></li>
-      </ul>
-    </nav>
-  </header>
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="about.html">O Nama / Lokacija</a></li>
+                    <li><a href="menu.html">Meni</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <main>
-    <h1>Naš Meni</h1>
-    <div id="menu">
-      <!-- START: Loading Indicator -->
-      <div class="loader-container" id="loader">
-        <div class="loading-spinner"></div>
-        <p>Učitavanje menija...</p>
-      </div>
-      <!-- END: Loading Indicator -->
+        <main>
+            <h1>Naš Meni</h1>
+            <div id="menu">
+                <!-- START: Loading Indicator -->
+                <div class="loader-container" id="loader">
+                    <div class="loading-spinner"></div>
+                    <p>Učitavanje menija...</p>
+                </div>
+                <!-- END: Loading Indicator -->
 
-      <!-- START: Category Navigation Links -->
-      <div id="category-nav-links" style="display: none;">
-          <!-- Category links will be generated here by JS -->
-      </div>
-      <!-- END: Category Navigation Links -->
+                <!-- START: Category Navigation Links -->
+                <div id="category-nav-links" style="display: none">
+                    <!-- Category links will be generated here by JS -->
+                </div>
+                <!-- END: Category Navigation Links -->
 
-      <!-- START: Menu Pager Structure -->
-      <div id="menu-pager" style="display: none;">
-        <h2 id="category-title"></h2>
-        <div id="category-pages">
-          <!-- Category pages will be generated here by JS -->
-        </div>
-        <div class="menu-navigation">
-          <button id="prev-category" class="menu-nav-button" disabled>❮ Prethodna</button>
-          <button id="next-category" class="menu-nav-button" disabled>Sledeća ❯</button>
-        </div>
-      </div>
-       <!-- END: Menu Pager Structure -->
+                <!-- START: Menu Pager Structure -->
+                <div id="menu-pager" style="display: none">
+                    <h2 id="category-title"></h2>
+                    <div id="category-pages">
+                        <!-- Category pages will be generated here by JS -->
+                    </div>
+                    <div class="menu-navigation">
+                        <button
+                            id="prev-category"
+                            class="menu-nav-button"
+                            disabled
+                        >
+                            ❮ Prethodna
+                        </button>
+                        <button
+                            id="next-category"
+                            class="menu-nav-button"
+                            disabled
+                        >
+                            Sledeća ❯
+                        </button>
+                    </div>
+                </div>
+                <!-- END: Menu Pager Structure -->
 
-       <!-- START: Error Message Area -->
-       <div id="menu-error" style="display: none; color: red; text-align: center; padding: 20px;"></div>
-       <!-- END: Error Message Area -->
+                <!-- START: Error Message Area -->
+                <div
+                    id="menu-error"
+                    style="
+                        display: none;
+                        color: red;
+                        text-align: center;
+                        padding: 20px;
+                    "
+                ></div>
+                <!-- END: Error Message Area -->
 
-        <!-- START: Empty Menu Message Area -->
-       <div id="menu-empty" style="display: none; text-align: center; padding: 20px;">
-           Meni je trenutno prazan ili nedostupan.
-       </div>
-       <!-- END: Empty Menu Message Area -->
+                <!-- START: Empty Menu Message Area -->
+                <div
+                    id="menu-empty"
+                    style="display: none; text-align: center; padding: 20px"
+                >
+                    Meni je trenutno prazan ili nedostupan.
+                </div>
+                <!-- END: Empty Menu Message Area -->
+            </div>
+        </main>
 
-    </div>
-  </main>
+        <footer>
+            <p>
+                © 2025 RašKafe. Sva prava zadržana. | Igora Nikića 34, Supnje |
+                <a href="tel:0668155566" style="color: #fff">0668155566</a>
+            </p>
+        </footer>
 
-  <footer>
-     <p>© 2025 RašKafe. Sva prava zadržana. | Igora Nikića 34, Supnje | <a href="tel:0668155566" style="color: #fff;">0668155566</a></p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
