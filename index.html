@@ -1,211 +1,253 @@
 <!DOCTYPE html>
-<html lang="sr"> <!-- Changed lang to Serbian -->
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Update title and description -->
-  <meta name="description" content="Dobrodošli u RašKafe. Uživajte u najboljoj kafi i prijatnom ambijentu u Raški. Pogledajte naš meni i lokaciju.">
-  <title>Početna - RašKafe</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Add specific carousel styles here or keep in style.css -->
-  <style>
-    /* --- Carousel Styles --- */
-    .carousel-container {
-      width: 100%;
-      /* max-width: 1200px; /* Optional: Limit max width */
-      margin: 20px auto; /* Center container and add space */
-      overflow: hidden; /* Crucial: Hides overflowing slides */
-      position: relative; /* Needed for absolute positioning of buttons */
-      aspect-ratio: 16 / 9;
-      background-color: #eee; /* Placeholder bg while images load */
-    }
+<html lang="sr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Dobrodošli u RašKafe. Uživajte u najboljoj kafi i prijatnom ambijentu u Raški. Pogledajte naš meni i lokaciju."
+        />
+        <title>Početna - RašKafe</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
 
-    .carousel-slide {
-      display: flex;
-      height: 100%;
-      transition: transform 0.7s ease-in-out;
-    }
+            .carousel-container {
+                width: 100%;
+                /* max-width: 1200px; /* Optional: Limit max width */
+                margin: 20px auto; /* Center container and add space */
+                overflow: hidden; /* Crucial: Hides overflowing slides */
+                position: relative; /* Needed for absolute positioning of buttons */
+                aspect-ratio: 16 / 9;
+                background-color: #eee; /* Placeholder bg while images load */
+            }
 
-    .carousel-item {
-      flex: 0 0 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
+            .carousel-slide {
+                display: flex;
+                height: 100%;
+                transition: transform 0.7s ease-in-out;
+            }
 
-    .carousel-item img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
+            .carousel-item {
+                flex: 0 0 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
 
-    /* --- Carousel Button Styles --- */
-    .carousel-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-      color: white;
-      border: none;
-      font-size: 2rem; /* Make arrows larger */
-      padding: 10px 15px;
-      cursor: pointer;
-      z-index: 10; /* Ensure buttons are above images */
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
+            .carousel-item img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
 
-    .carousel-button:hover,
-    .carousel-button:focus {
-      background-color: rgba(0, 0, 0, 0.8); /* Darker on hover/focus */
-      outline: none;
-    }
+            
+            .carousel-button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(
+                    0,
+                    0,
+                    0,
+                    0.5
+                ); /* Semi-transparent background */
+                color: white;
+                border: none;
+                font-size: 2rem; /* Make arrows larger */
+                padding: 10px 15px;
+                cursor: pointer;
+                z-index: 10; /* Ensure buttons are above images */
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
 
-    .carousel-button.prev {
-      left: 15px; /* Position left button */
-    }
+            .carousel-button:hover,
+            .carousel-button:focus {
+                background-color: rgba(
+                    0,
+                    0,
+                    0,
+                    0.8
+                ); /* Darker on hover/focus */
+                outline: none;
+            }
 
-    .carousel-button.next {
-      right: 15px; /* Position right button */
-    }
-    /* --- End Carousel Styles --- */
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Početna</a></li>
-        <li><a href="about.html">O Nama / Lokacija</a></li>
-        <li><a href="menu.html">Meni</a></li>
-      </ul>
-    </nav>
-  </header>
+            .carousel-button.prev {
+                left: 15px; /* Position left button */
+            }
 
-  <main>
-    <!-- Carousel Section -->
-    <section class="carousel-container" id="imageCarousel">
-      <div class="carousel-slide">
-        <!-- Image items using 1.jpg, 2.jpg, etc. -->
-        <div class="carousel-item">
-          <img src="images/1.jpg" alt="Ambijent RašKafe - Slika 1">
-        </div>
-        <div class="carousel-item">
-          <img src="images/2.jpg" alt="Ponuda RašKafe - Slika 2">
-        </div>
-        <div class="carousel-item">
-          <img src="images/3.jpg" alt="Enterijer RašKafe - Slika 3">
-        </div>
-        <div class="carousel-item">
-          <img src="images/4.jpg" alt="Detalj RašKafe - Slika 4">
-        </div>
-        <div class="carousel-item">
-          <img src="images/5.jpg" alt="Kafa u RašKafe - Slika 5">
-        </div>
-        <div class="carousel-item">
-          <img src="images/6.jpg" alt="Atmosfera RašKafe - Slika 6">
-        </div>
-      </div>
+            .carousel-button.next {
+                right: 15px; /* Position right button */
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="about.html">O Nama / Lokacija</a></li>
+                    <li><a href="menu.html">Meni</a></li>
+                </ul>
+            </nav>
+        </header>
 
-      <!-- Navigation Arrows -->
-      <button class="carousel-button prev" aria-label="Prethodna slika">❮</button> <!-- Left arrow character -->
-      <button class="carousel-button next" aria-label="Sledeća slika">❯</button> <!-- Right arrow character -->
+        <main>
+            <!-- Carousel Section -->
+            <section class="carousel-container" id="imageCarousel">
+                <div class="carousel-slide">
+                    <!-- Image items using 1.jpg, 2.jpg, etc. -->
+                    <div class="carousel-item">
+                        <img
+                            src="images/1.jpg"
+                            alt="Ambijent RašKafe - Slika 1"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="images/2.jpg"
+                            alt="Ponuda RašKafe - Slika 2"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="images/3.jpg"
+                            alt="Enterijer RašKafe - Slika 3"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="images/4.jpg"
+                            alt="Detalj RašKafe - Slika 4"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="images/5.jpg"
+                            alt="Kafa u RašKafe - Slika 5"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="images/6.jpg"
+                            alt="Atmosfera RašKafe - Slika 6"
+                        />
+                    </div>
+                </div>
 
-    </section>
+                <!-- Navigation Arrows -->
+                <button
+                    class="carousel-button prev"
+                    aria-label="Prethodna slika"
+                >
+                    ❮
+                </button>
+                <!-- Left arrow character -->
+                <button class="carousel-button next" aria-label="Sledeća slika">
+                    ❯
+                </button>
+                <!-- Right arrow character -->
+            </section>
 
-    <!-- Other content -->
-    <section class="welcome-text" style="text-align: center; padding: 30px 20px;">
-       <h1>Dobrodošli u RašKafe</h1>
-       <p>Doživite ukus izvrsnosti i toplinu gostoprimstva.</p>
-    </section>
+            <!-- Other content -->
+            <section
+                class="welcome-text"
+                style="text-align: center; padding: 30px 20px"
+            >
+                <h1>Dobrodošli u RašKafe</h1>
+                <p>Doživite ukus izvrsnosti i toplinu gostoprimstva.</p>
+            </section>
+        </main>
 
-  </main>
+        <footer>
+            <!-- Consistent footer information -->
+            <p>
+                © 2025 RašKafe. Sva prava zadržana. | Igora Nikića 34, Supnje |
+                <a href="tel:0668155566" style="color: #fff">0668155566</a>
+            </p>
+            <!-- ** PLEASE REPLACE WITH ACTUAL PHONE NUMBER ** -->
+        </footer>
 
-  <footer>
-    <!-- Consistent footer information -->
-    <p>© 2025 RašKafe. Sva prava zadržana. | Igora Nikića 34, Supnje | <a href="tel:0668155566" style="color: #fff;">0668155566</a></p> <!-- ** PLEASE REPLACE WITH ACTUAL PHONE NUMBER ** -->
-  </footer>
+        <script>
+            // --- Carousel JavaScript ---
+            const carouselSlide = document.querySelector('.carousel-slide');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const carouselContainer = document.getElementById('imageCarousel');
+            const prevButton = document.querySelector('.carousel-button.prev'); // Select Prev button
+            const nextButton = document.querySelector('.carousel-button.next'); // Select Next button
 
-  <script>
-    // --- Carousel JavaScript ---
-    const carouselSlide = document.querySelector('.carousel-slide');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const carouselContainer = document.getElementById('imageCarousel');
-    const prevButton = document.querySelector('.carousel-button.prev'); // Select Prev button
-    const nextButton = document.querySelector('.carousel-button.next'); // Select Next button
+            let currentIndex = 0;
+            const totalItems = carouselItems.length;
+            let slideInterval;
 
-    let currentIndex = 0;
-    const totalItems = carouselItems.length;
-    let slideInterval;
+            function goToSlide(index) {
+               // Basic check to prevent index out of bounds during quick clicks
+               if (index < 0) index = totalItems - 1;
+               if (index >= totalItems) index = 0;
 
-    function goToSlide(index) {
-       // Basic check to prevent index out of bounds during quick clicks
-       if (index < 0) index = totalItems - 1;
-       if (index >= totalItems) index = 0;
+              carouselSlide.style.transform = `translateX(-${index * 100}%)`;
+              currentIndex = index;
+            }
 
-      carouselSlide.style.transform = `translateX(-${index * 100}%)`;
-      currentIndex = index;
-    }
+            function nextSlide() {
+              let nextIndex = currentIndex + 1;
+              // No need to check >= totalItems here, goToSlide handles it
+              goToSlide(nextIndex);
+            }
 
-    function nextSlide() {
-      let nextIndex = currentIndex + 1;
-      // No need to check >= totalItems here, goToSlide handles it
-      goToSlide(nextIndex);
-    }
+            function prevSlide() {
+               let prevIndex = currentIndex - 1;
+               // No need to check < 0 here, goToSlide handles it
+               goToSlide(prevIndex);
+            }
 
-    function prevSlide() {
-       let prevIndex = currentIndex - 1;
-       // No need to check < 0 here, goToSlide handles it
-       goToSlide(prevIndex);
-    }
+            function startSlideShow() {
+              // Clear existing interval before starting a new one
+              clearInterval(slideInterval);
+              // Change slide every 4 seconds (4000 milliseconds)
+              slideInterval = setInterval(nextSlide, 4000);
+            }
 
-    function startSlideShow() {
-      // Clear existing interval before starting a new one
-      clearInterval(slideInterval);
-      // Change slide every 4 seconds (4000 milliseconds)
-      slideInterval = setInterval(nextSlide, 4000);
-    }
-
-    function stopSlideShow() {
-       clearInterval(slideInterval);
-    }
+            function stopSlideShow() {
+               clearInterval(slideInterval);
+            }
 
 
-    // --- Event Listeners ---
+            // --- Event Listeners ---
 
-    // Next Button Click
-    nextButton.addEventListener('click', () => {
-      nextSlide();
-      startSlideShow(); // Reset interval timer after manual click
-    });
+            // Next Button Click
+            nextButton.addEventListener('click', () => {
+              nextSlide();
+              startSlideShow(); // Reset interval timer after manual click
+            });
 
-    // Previous Button Click
-    prevButton.addEventListener('click', () => {
-      prevSlide();
-      startSlideShow(); // Reset interval timer after manual click
-    });
+            // Previous Button Click
+            prevButton.addEventListener('click', () => {
+              prevSlide();
+              startSlideShow(); // Reset interval timer after manual click
+            });
 
-    // Pause slideshow on hover (Optional but good UX)
-    carouselContainer.addEventListener('mouseenter', stopSlideShow);
+            // Pause slideshow on hover (Optional but good UX)
+            carouselContainer.addEventListener('mouseenter', stopSlideShow);
 
-    // Resume slideshow on mouse leave (Optional but good UX)
-    carouselContainer.addEventListener('mouseleave', startSlideShow);
+            // Resume slideshow on mouse leave (Optional but good UX)
+            carouselContainer.addEventListener('mouseleave', startSlideShow);
 
-    // Initial setup
-    if (totalItems > 1) { // Only setup if there's more than one image
-        goToSlide(0); // Ensure starting position is correct
-        startSlideShow();
-    } else {
-      // Hide buttons if only one image
-      if (prevButton) prevButton.style.display = 'none';
-      if (nextButton) nextButton.style.display = 'none';
-    }
-    // --- End Carousel JavaScript ---
-  </script>
-
-</body>
+            // Initial setup
+            if (totalItems > 1) { // Only setup if there's more than one image
+                goToSlide(0); // Ensure starting position is correct
+                startSlideShow();
+            } else {
+              // Hide buttons if only one image
+              if (prevButton) prevButton.style.display = 'none';
+              if (nextButton) nextButton.style.display = 'none';
+            }
+            // --- End Carousel JavaScript ---
+        </script>
+    </body>
 </html>
