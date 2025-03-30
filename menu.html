@@ -1,12 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr"> <!-- Changed lang to Serbian -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- Add a specific meta description for the Menu page -->
-  <meta name="description" content="Explore the delicious menu offerings at RašKafe. From coffee to snacks, find your favorite treat.">
+  <meta name="description" content="Istražite ukusnu ponudu RašKafe. Od kafe do poslastica, pronađite svoj omiljeni užitak po kategorijama."> <!-- Updated description -->
   <title>Meni - RašKafe</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Add specific styles for the menu pager here or in style.css -->
+  <style>
+    /* --- Menu Pager Styles --- */
+    #menu-pager {
+      position: relative; /* Needed for positioning controls if desired */
+      padding-bottom: 60px; /* Space for controls below */
+      min-height: 300px; /* Ensure it has some height even when loading */
+    }
+
+    .category-page {
+      display: none; /* Hide all pages by default */
+      animation: fadeIn 0.5s ease-in-out; /* Add a fade-in effect */
+    }
+
+    .category-page.active {
+      display: block; /* Show only the active page */
+    }
+
+    #category-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      color: #444;
+    }
+
+    .menu-navigation {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 15px;
+      border-top: 1px solid #eee; /* Separator line */
+      /* position: absolute; */ /* Alternative: fix controls at the bottom */
+      /* bottom: 10px; */
+      /* left: 0; */
+      /* right: 0; */
+    }
+
+    .menu-nav-button {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu-nav-button:hover:not(:disabled) {
+      background-color: #333;
+    }
+
+    .menu-nav-button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* --- End Menu Pager Styles --- */
+  </style>
 </head>
 <body>
   <header>
@@ -20,19 +85,45 @@
   </header>
 
   <main>
-    <h1>Naš Meni</h1> <!-- Changed H1 to Serbian -->
+    <h1>Naš Meni</h1>
     <div id="menu">
       <!-- START: Loading Indicator -->
-      <div class="loader-container">
+      <div class="loader-container" id="loader"> <!-- Give loader an ID -->
         <div class="loading-spinner"></div>
-        <p>Učitavanje menija...</p> <!-- Loading message in Serbian -->
+        <p>Učitavanje menija...</p>
       </div>
       <!-- END: Loading Indicator -->
+
+      <!-- START: Menu Pager Structure -->
+      <div id="menu-pager" style="display: none;"> <!-- Hide pager initially -->
+        <h2 id="category-title"></h2> <!-- Title for the current category -->
+        <div id="category-pages">
+          <!-- Category pages will be generated here by JS -->
+        </div>
+        <div class="menu-navigation">
+          <button id="prev-category" class="menu-nav-button" disabled>❮ Prethodna</button>
+          <button id="next-category" class="menu-nav-button" disabled>Sledeća ❯</button>
+        </div>
+      </div>
+       <!-- END: Menu Pager Structure -->
+
+       <!-- START: Error Message Area -->
+       <div id="menu-error" style="display: none; color: red; text-align: center; padding: 20px;">
+          <!-- Error message will be inserted here by JS -->
+       </div>
+       <!-- END: Error Message Area -->
+
+        <!-- START: Empty Menu Message Area -->
+       <div id="menu-empty" style="display: none; text-align: center; padding: 20px;">
+           Meni je trenutno prazan ili nedostupan.
+       </div>
+       <!-- END: Empty Menu Message Area -->
+
     </div>
   </main>
 
   <footer>
-    <p>© 2025 RašKafe. Sva prava zadržana. | Igora Nikića 34, Supnje | <a href="tel:0668155566" style="color: #fff;">0668155566</a></p>
+     <p>© 2025 RašKafe. Sva prava zadržana. | Igora Nikića 34, Supnje | <a href="tel:0668155566" style="color: #fff;">0668155566</a></p>
   </footer>
 
   <script src="script.js"></script>
