@@ -1,78 +1,78 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 header {
-  background: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
 
 header nav ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 header nav ul li {
-  display: inline;
-  margin: 0 10px;
+    display: inline;
+    margin: 0 10px;
 }
 
 header nav ul li a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 main {
-  padding: 20px;
+    padding: 20px;
 }
 
 .menu-item {
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
 }
 
 .menu-item h3 {
-  margin: 0;
-  font-size: 1.2em;
-  color: #333;
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
 }
 
 .menu-item p {
-  margin: 5px 0 0;
-  color: #666;
+    margin: 5px 0 0;
+    color: #666;
 }
 
 footer {
-  text-align: center;
-  padding: 10px 0;
-  background: #333;
-  color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
 }
 
 /* --- Loading Spinner Styles --- */
 .loader-container {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack spinner and text vertically */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding: 40px 20px; /* Add some space around */
-  min-height: 150px; /* Give it some minimum height */
-  text-align: center;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack spinner and text vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 40px 20px; /* Add some space around */
+    min-height: 150px; /* Give it some minimum height */
+    text-align: center;
 }
 
 .loading-spinner {
-  border: 6px solid #f3f3f3; /* Light grey base circle */
-  border-top: 6px solid #555; /* Darker grey for spinning part */
-  border-radius: 50%; /* Make it a circle */
-  width: 40px; /* Size of the spinner */
-  height: 40px;
-  animation: spin 1.5s linear infinite; /* Apply the spin animation */
-  margin-bottom: 15px; /* Space between spinner and text */
+    border: 6px solid #f3f3f3; /* Light grey base circle */
+    border-top: 6px solid #555; /* Darker grey for spinning part */
+    border-radius: 50%; /* Make it a circle */
+    width: 40px; /* Size of the spinner */
+    height: 40px;
+    animation: spin 1.5s linear infinite; /* Apply the spin animation */
+    margin-bottom: 15px; /* Space between spinner and text */
 }
 
 .loader-container p {
@@ -82,41 +82,45 @@ footer {
 
 /* Define the spinning animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 /* --- End Loading Spinner Styles --- */
 
 /* --- Style for the Get Directions Button --- */
 
 .directions-button {
-  /* Basic block-like appearance */
-  display: inline-block;
-  padding: 12px 24px; /* Controls size */
-  text-align: center;
+    /* Basic block-like appearance */
+    display: inline-block;
+    padding: 12px 24px; /* Controls size */
+    text-align: center;
 
-  /* Colors */
-  background-color: #4285F4; /* Button color (Google Blue) */
-  color: #ffffff; /* Text color (White) */
+    /* Colors */
+    background-color: #4285F4; /* Button color (Google Blue) */
+    color: #ffffff; /* Text color (White) */
 
-  /* Text styling */
-  text-decoration: none; /* REMOVES the hyperlink underline */
-  font-weight: bold;
+    /* Text styling */
+    text-decoration: none; /* REMOVES the hyperlink underline */
+    font-weight: bold;
 
-  /* Shape and Effects */
-  border-radius: 5px; /* Rounded corners */
-  border: none; /* Removes default border */
-  cursor: pointer; /* Hand icon on hover */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Adds depth */
-  transition: background-color 0.3s ease; /* Smooth hover */
+    /* Shape and Effects */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* Removes default border */
+    cursor: pointer; /* Hand icon on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds depth */
+    transition: background-color 0.3s ease; /* Smooth hover */
 }
 
 .directions-button:hover,
 .directions-button:focus {
-  /* Change appearance on hover/focus */
-  background-color: #3578E5; /* Darker blue */
-  color: #ffffff;
-  outline: none; /* Optional: remove focus ring */
+    /* Change appearance on hover/focus */
+    background-color: #3578E5; /* Darker blue */
+    color: #ffffff;
+    outline: none; /* Optional: remove focus ring */
 }
 
 /* --- End of button styles --- */
