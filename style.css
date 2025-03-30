@@ -53,3 +53,37 @@ footer {
   background: #333;
   color: #fff;
 }
+
+/* --- Style for the Get Directions Button --- */
+
+.directions-button {
+  /* Basic block-like appearance */
+  display: inline-block;
+  padding: 12px 24px; /* Controls size */
+  text-align: center;
+
+  /* Colors */
+  background-color: #4285F4; /* Button color (Google Blue) */
+  color: #ffffff; /* Text color (White) */
+
+  /* Text styling */
+  text-decoration: none; /* REMOVES the hyperlink underline */
+  font-weight: bold;
+
+  /* Shape and Effects */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Removes default border */
+  cursor: pointer; /* Hand icon on hover */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Adds depth */
+  transition: background-color 0.3s ease; /* Smooth hover */
+}
+
+.directions-button:hover,
+.directions-button:focus {
+  /* Change appearance on hover/focus */
+  background-color: #3578E5; /* Darker blue */
+  color: #ffffff;
+  outline: none; /* Optional: remove focus ring */
+}
+
+/* --- End of button styles --- */
