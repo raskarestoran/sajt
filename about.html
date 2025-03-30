@@ -1,116 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Add a specific meta description for the About page -->
-  <meta name="description" content="Learn more about [Restaurant Name], our location, and how to contact us. Find us easily with our map.">
-  <title>O nama - RašKafe</title> <!-- Update title -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Početna</a></li>
-        <li><a href="about.html">O Nama / Lokacija</a></li>
-        <li><a href="menu.html">Meni</a></li>
-      </ul>
-    </nav>
-  </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Learn more about [Restaurant Name], our location, and how to contact us. Find us easily with our map."
+        />
+        <title>O nama - RašKafe</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="about.html">O Nama / Lokacija</a></li>
+                    <li><a href="menu.html">Meni</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <main>
-    <div class="contact-location-container">
-      <div class="contact-details">
-        <h2>Adresa</h2>
-        <p>
-          <!-- ** REPLACE WITH ACTUAL ADDRESS ** -->
-          Igora Nikića 34<br>
-          Supnje<br>
-        </p>
+        <main>
+            <div class="contact-location-container">
+                <div class="contact-details">
+                    <h2>Adresa</h2>
+                    <p>
+                        Igora Nikića 34<br />
+                        Supnje<br />
+                    </p>
 
-        <h2>Broj telefona</h2>
-        <p>
-          <!-- ** REPLACE WITH ACTUAL PHONE NUMBER ** -->
-          <a href="tel:0668155566 ">0668155566 </a> <!-- Make it clickable -->
-        </p>
+                    <h2>Broj telefona</h2>
+                    <p>
+                        <a href="tel:0668155566 ">0668155566 </a>
+                    </p>
 
-        <h2>Radno vreme</h2>
-        <table class="opening-hours-table">
-          <tbody>
-            <tr>
-              <td>Ponedeljak:</td>
-              <td>7:30 - 11:30</td>
-            </tr>
-            <tr>
-              <td>Utorak:</td>
-              <td>7:30 - 11:30</td>
-            </tr>
-            <tr>
-              <td>Sreda:</td>
-              <td>7:30 - 11:30</td>
-            </tr>
-            <tr>
-              <td>Četvrtak:</td>
-              <td>7:30 - 11:30</td>
-            </tr>
-            <tr>
-              <td>Petak:</td>
-              <td>7:30 - 11:30</td>
-            </tr>
-            <tr>
-              <td>Subota:</td>
-              <td>7:30 - 11:30</td>
-            </tr>
-            <tr>
-              <td>Nedelja:</td>
-              <td>7:30 - 11:30</td>
-            </tr>
-          </tbody>
-        </table>
+                    <h2>Radno vreme</h2>
+                    <table class="opening-hours-table">
+                        <tbody>
+                            <tr>
+                                <td>Ponedeljak:</td>
+                                <td>7:30 - 11:30</td>
+                            </tr>
+                            <tr>
+                                <td>Utorak:</td>
+                                <td>7:30 - 11:30</td>
+                            </tr>
+                            <tr>
+                                <td>Sreda:</td>
+                                <td>7:30 - 11:30</td>
+                            </tr>
+                            <tr>
+                                <td>Četvrtak:</td>
+                                <td>7:30 - 11:30</td>
+                            </tr>
+                            <tr>
+                                <td>Petak:</td>
+                                <td>7:30 - 11:30</td>
+                            </tr>
+                            <tr>
+                                <td>Subota:</td>
+                                <td>7:30 - 11:30</td>
+                            </tr>
+                            <tr>
+                                <td>Nedelja:</td>
+                                <td>7:30 - 11:30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-        <!-- You could add Opening Hours here too -->
-        <!--
-        <h2>Opening Hours</h2>
-        <p>
-          Mon-Fri: 11:00 - 22:00<br>
-          Sat-Sun: 12:00 - 23:00
-        </p>
-        -->
-      </div>
+                <div class="location-map">
+                    <h2>Naša lokacija</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.6069283413777!2d20.62091117674052!3d43.28116797442199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47565a0b6f655575%3A0x32df24338b991397!2zNDPCsDE2JzUyLjIiTiAyMMKwMzcnMjMuMSJF!5e0!3m2!1sen!2sus!4v1715790665000!5m2!1sen!2sus"
+                        width="100%"
+                        height="350"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    >
+                    </iframe>
+                    <br />
+                    <p style="margin-top: 20px">
+                        <a
+                            href="https://www.google.com/maps/dir/?api=1&destination=43.281164,20.623088"
+                            target="_blank"
+                            class="directions-button"
+                            <!--
+                            THIS
+                            class
+                            is
+                            KEY
+                            --
+                        >
+                            Putanja
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </main>
 
-      <div class="location-map">
-        <h2>Naša lokacija</h2>
-        <!-- OpenStreetMap Embed using iframe -->
-       <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.6069283413777!2d20.62091117674052!3d43.28116797442199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47565a0b6f655575%3A0x32df24338b991397!2zNDPCsDE2JzUyLjIiTiAyMMKwMzcnMjMuMSJF!5e0!3m2!1sen!2sus!4v1715790665000!5m2!1sen!2sus"
-          width="100%"
-          height="350"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <br/>
-              <!-- START: Added Directions Button -->
-        <p style="margin-top: 20px;">
-          <a
-            href="https://www.google.com/maps/dir/?api=1&destination=43.281164,20.623088"
-            target="_blank"
-            class="directions-button"  <!-- THIS CLASS IS KEY -->
-          
-            Putanja
-          </a>
-        </p>
-        <!-- END: Added Directions Button -->
-        
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <!-- Make sure footer content is consistent or updated -->
-    <p>© 2025 RašKafe. Sva prava zadržana. | Igora Nikića 34, Supnje | <a href="tel:0668155566" style="color: #fff;">0668155566</a></p> <!-- ** PLEASE REPLACE WITH ACTUAL PHONE NUMBER ** -->
-  </footer>
-</body>
+        <footer>
+            <p>
+                © 2025 RašKafe. Sva prava zadržana. | Igora Nikića 34, Supnje |
+                <a href="tel:0668155566" style="color: #fff">0668155566</a>
+            </p>
+        </footer>
+    </body>
 </html>
